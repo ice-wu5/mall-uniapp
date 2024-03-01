@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App'
 import './uni.promisify.adaptor'
+import "@/style/index.css"
 
 Vue.config.productionTip = false
 
