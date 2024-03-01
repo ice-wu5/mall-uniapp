@@ -11,3 +11,12 @@ export const  getBanner=(data)=> {
 	})
 }
 
+
+//获取一级分类
+export const findCategory1=(data)=>{
+  return request({
+		url: '/mall-api/index/findCategory1',
+		method: 'GET',
+		data
+	})
+}

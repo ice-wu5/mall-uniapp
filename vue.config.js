@@ -1,4 +1,6 @@
 module.exports = {
+  transpileDependencies:['@dcloudio/uni-ui'],
+
 	publicPath: './',
     devServer: {
         proxy: {

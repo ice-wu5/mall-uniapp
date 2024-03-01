@@ -1,0 +1,11 @@
+.flex{
+  display: flex;
+}
+
+.flex-c{
+  display: flex;
+  flex-direction:column;
+}
+view{
+  box-sizing: border-box;
+}
