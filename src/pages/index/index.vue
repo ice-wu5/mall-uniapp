@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import {getBanner}from '@/api/category.js'
 	export default {
 		data() {
 			return {
@@ -15,10 +16,24 @@
 			}
 		},
 		onLoad() {
-
+this.getBannerList()
 		},
 		methods: {
-
+			async getBannerList() {
+				try {
+					const res = await getBanner()
+					console.log(res);
+					// const [err,res] = await uni.request({
+					// 	url:`/api/mall-api/index/findBanner`
+					// })()
+					// // const res2 = await findCategory1()
+					// console.log(err);
+					// console.log(res.data);
+				} catch (e) {
+					//TODO handle the exception
+					console.log('未获取到banner数据');
+				}
+			}
 		}
 	}
 </script>
