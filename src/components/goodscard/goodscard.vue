@@ -1,14 +1,14 @@
 <template>
     <view class="goodscard">
       <view>
-        <image src="http://39.98.123.211:8300/images/banner-1.png" class="image" mode="widthFix"></image>
+        <image :src="goodsitem.imageUrl" class="image" mode="widthFix"></image>
       </view>
       <view class="desc">
-        <view class="title">冰淇冰淇淋冰淇冰淇冰淇淋冰淇淋冰淇淋冰淇淋冰淇淋冰淇1淋淋冰淇淋冰淇淋冰淇淋冰淇1淋</view>
-        <view class="subtitle">花花花花花花冰淇冰淇淋冰淇淋冰淇淋冰淇淋冰淇淋冰淇1淋花花花花花花花花</view>
+        <view class="title">{{goodsitem.name}}</view>
+        <view class="subtitle">{{goodsitem.material}}</view>
         <view class=" operation flex">
-          <view  class="final-price">￥5088</view>
-          <view class="price">￥5088</view>
+          <view  class="final-price">￥{{goodsitem.price}}</view>
+          <view class="price">￥{{goodsitem.marketPrice}}</view>
           <view class="icon">
             <uni-icons type="cart" size="20" color="#e9e"></uni-icons>
           </view>
@@ -21,6 +21,9 @@
 import {uniIcons} from '@dcloudio/uni-ui'
 export default {
 name:'GoodsCard',
+props:{
+  goodsitem:Object
+},
 components: {uniIcons}
 }
 </script>
@@ -61,9 +64,14 @@ components: {uniIcons}
     .operation{
       justify-content: space-between;
       font-size: 26rpx;
+      .price{
+        text-decoration: line-through;
+        color: #999;
+      }
     }
     .image{
       width: 100%;
+      vertical-align: bottom;
     }
   
   }

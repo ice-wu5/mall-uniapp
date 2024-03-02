@@ -1,12 +1,8 @@
 <template>
   <view class="goodslist">
-    <view class="like">猜你喜欢</view>
-    <view class="goodsitem flex">
-      <GoodsCard></GoodsCard>
-      <GoodsCard></GoodsCard>
-      <GoodsCard></GoodsCard>
-      <GoodsCard></GoodsCard>
-      <GoodsCard></GoodsCard>
+    <view class="like">{{title}}</view>
+    <view class="goodsitem flex">     
+      <slot></slot>  
     </view>
     <view class="more">查看更多</view>
   </view>
@@ -17,6 +13,9 @@
 import GoodsCard from '@/components/goodscard/goodscard.vue'
 export default {
 name:'GoodsList',
+props:{
+  title:String
+},
 components:{
   GoodsCard
 }
@@ -28,6 +27,7 @@ components:{
   background-color: #eee;
   width: 100%;
   .goodsitem{
+
     flex-wrap: wrap;
     justify-content: space-around;
     &::after{
