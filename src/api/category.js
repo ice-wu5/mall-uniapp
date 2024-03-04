@@ -39,3 +39,11 @@ export const findRecommendGoods=(data)=>{
 		data
 	})
 }
+//获取分类层级数据
+export const findCategoryTree=(data)=>{
+  return request({
+		url: '/mall-api/index/findCategoryTree',
+		method: 'GET',
+		data
+	})
+}

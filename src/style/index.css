@@ -9,7 +9,7 @@
 view{
   box-sizing: border-box;
 }
-uni-page-body {
+uni-page-body ,page{
 	height:100%;
   width:100%;
 }
@@ -19,3 +19,25 @@ uni-page-body {
     height:100%;
   }
 
+.wrap{
+  flex-wrap: wrap;
+}
+
+.flex-one{
+  flex:1;
+}
+
+.align-items-center{
+  align-items: center;
+}
+
+.padding-top-bottom-10{
+  padding: 10rpx 0;
+}
+
+.font-size-12px{
+  font-size: 12px;
+}
+.margin-50rpx{
+  padding: 50rpx;
+}

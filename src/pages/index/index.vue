@@ -67,6 +67,9 @@ export default {
       duration: 500,
     };
   },
+	onReachBottom(){
+  console.log('触底了');
+},
   onLoad() {
     this.getBannerList();
 		this.getCategory1()
