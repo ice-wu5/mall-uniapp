@@ -51,6 +51,17 @@ process.UNI_LIBRARIES.forEach(libraryName => {
   ])
 })
 
+plugins.push(
+  [
+    'import',
+    {
+      libraryName: 'vant',
+      libraryDirectory: 'es',
+      style: true
+    },
+    'vant'
+  ]
+)
 if (process.env.UNI_PLATFORM !== 'h5') {
   plugins.push('@babel/plugin-transform-runtime')
 }

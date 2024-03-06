@@ -4,7 +4,7 @@
     <view class="goodsitem flex">     
       <slot></slot>  
     </view>
-    <view class="more">查看更多</view>
+    <navigator url="../../pages/goods/goodslist/goodslist" class="more">查看更多</navigator>
   </view>
 
 </template>

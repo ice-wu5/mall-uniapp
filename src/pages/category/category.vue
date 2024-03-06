@@ -18,10 +18,10 @@
       <view class="right">
           <view class="title margin-50rpx">{{goodsDetail.name}}</view>
           <view class="goods-list flex wrap">
-            <view class="goods-item flex-c align-items-center padding-top-bottom-10" v-for="i in goodsDetail.children" :key="i.id">
+            <navigator :url="`/pages/goods/goodslist/goodslist?category2Id=${i.id}`"  class="goods-item flex-c align-items-center padding-top-bottom-10" v-for="i in goodsDetail.children" :key="i.id">
               <image :src="i.imageUrl" class="image"></image>
               <text class="font-size-12px">{{i.name}}</text>
-            </view>
+            </navigator>
           </view>
       </view>
     </view>
@@ -71,8 +71,8 @@ export default {
 }
 .category-container {
   width: 100%;
-
   height: 100%;
+  overflow: hidden;
   .right{
     width: 100%;
     padding-left: 160rpx;
@@ -80,7 +80,9 @@ export default {
 }
 .left {
   position: fixed;
-  top:88rpx;
+  left: 0;
+  top: var(--window-top);
+
   left:0;
   padding-bottom: 100rpx;
   

@@ -1,43 +1,130 @@
-.flex{
+.flex {
   display: flex;
 }
-
-.flex-c{
+.flex-c {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
 }
-view{
+view {
   box-sizing: border-box;
 }
-uni-page-body ,page{
-	height:100%;
-  width:100%;
+uni-page-body,
+page {
+  height: 100%;
+  width: 100%;
 }
 .container {
-
-    width:100%;
-    height:100%;
-  }
-
-.wrap{
+  width: 100%;
+  height: 100%;
+}
+.width-height-1 {
+  width: 100%;
+  height: 100%;
+}
+.wrap {
   flex-wrap: wrap;
 }
-
-.flex-one{
-  flex:1;
+.flex-one {
+  flex: 1;
 }
-
-.align-items-center{
+.align-items-center {
   align-items: center;
 }
-
-.padding-top-bottom-10{
+.padding-top-bottom-10 {
   padding: 10rpx 0;
 }
-
-.font-size-12px{
+.font-size-12px {
   font-size: 12px;
 }
-.margin-50rpx{
+.font-size-26rpx {
+  font-size: 26rpx;
+}
+.margin-50rpx {
   padding: 50rpx;
+}
+.justify-c-space-around {
+  justify-content: space-around;
+}
+.bgc-eee {
+  background-color: #eee;
+}
+.width-50precent {
+  width: 50%;
+}
+.after-width-50precent::after {
+  content: '';
+  width: 350rpx;
+}
+.width-100precent {
+  width: 100%;
+}
+.height-300rpx {
+  height: 300rpx;
+}
+.height-100rpx {
+  height: 100rpx;
+}
+.text-align-center {
+  text-align: center;
+}
+.bgc-fff {
+  background-color: #fff;
+}
+.border-radius-20rpx {
+  border-radius: 20rpx;
+}
+.margin-side30rpx-b-20rpx {
+  margin: 0 30rpx 20rpx;
+}
+.vertical-align {
+  vertical-align: bottom;
+}
+.height-150rpx {
+  height: 150rpx;
+}
+.w150-h150 {
+  width: 150rpx;
+  height: 150rpx;
+}
+.border-radius-50 {
+  border-radius: 50%;
+}
+.position-absoule {
+  position: absolute;
+}
+.position-relative {
+  position: relative;
+}
+.left-5 {
+  left: 5%;
+}
+.top--20 {
+  top: -20%;
+}
+.left-30 {
+  left: 30%;
+}
+.top-20 {
+  top: 20%;
+}
+.height-200rpx {
+  height: 200rpx;
+}
+.justify-content-space-between {
+  justify-content: space-between;
+}
+.padding-10 {
+  padding: 20rpx;
+}
+.margin-bottom-40rpx {
+  margin-bottom: 40rpx;
+}
+.margin-right-20rpx {
+  margin-right: 20rpx;
+}
+.color-eee {
+  color: #1303032d;
+}
+.heifht-400rpx {
+  height: 400rpx;
 }
