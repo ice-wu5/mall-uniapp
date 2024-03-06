@@ -14,7 +14,9 @@ function service(options = {}) {
 	// 		'Authorization': `${getToken()}`	// 这里是token(可自行修改)
 	// 	};
 	// }
-
+	uni.showLoading({
+		title: '加载中'
+	});
 	return new Promise((resolved, rejected) => {
 		options.success = (res) => {
 			// 如果请求回来的状态码不是200则执行以下操作
@@ -50,6 +52,13 @@ function service(options = {}) {
 			});
 			rejected(err);
 		};
+		options.complete=()=>{
+			
+			
+						//  关闭正在等待的图标
+		uni.hideLoading();
+			
+		}
 		uni.request(options);
 	});
 }

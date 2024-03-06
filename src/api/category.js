@@ -47,3 +47,11 @@ export const findCategoryTree=(data)=>{
 		data
 	})
 }
+//获取商品分页数据
+export const getPageGoodsList=(data)=>{
+  return request({
+		url: `/mall-api/goods/list/${data.page}/${data.limit}`,
+		method: 'GET',
+		data
+	})
+}

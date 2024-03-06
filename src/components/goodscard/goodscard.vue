@@ -32,6 +32,7 @@ components: {uniIcons}
 
   .goodscard{
     width: 350rpx;
+    height:100%;
     margin-bottom: 25rpx;
 
     .desc{
