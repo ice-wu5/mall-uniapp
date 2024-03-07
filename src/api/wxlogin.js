@@ -21,3 +21,14 @@ export const  wxGetUserInfo=(data)=> {
 		data
 	})
 }
+
+//更新用户信息
+// /mall-api/weixin/updateUser
+
+export const  editUserInfo=(data)=> {
+	return request({
+		url: `/mall-api/weixin/updateUser`,
+		method: 'POST',
+		data
+	})
+}

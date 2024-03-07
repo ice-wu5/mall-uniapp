@@ -41,6 +41,11 @@ export default {
         uni.showToast({
           title: "登录成功",
           duration: 2000,
+          success: () => {
+            uni.redirectTo({
+              url: "../edit/edit",
+            });
+          },
         });
         console.log("用户信息", res);
       } catch (error) {

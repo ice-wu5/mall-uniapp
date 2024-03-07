@@ -51,6 +51,12 @@
 			"style": {
 				"navigationBarTitleText": "登录"
 			}
+		},
+		{
+			"path": "pages/edit/edit",
+			"style": {
+				"navigationBarTitleText": "编辑个人资料"
+			}
 		}
 	],
 	"globalStyle": {
