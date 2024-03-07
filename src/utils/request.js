@@ -1,4 +1,6 @@
-import {baseUrl} from '../utils/env';
+import { baseUrl } from '../utils/env';
+import { getToken } from '@/utils/user.js'
+
 console.log('当前平台：', process.env.VUE_APP_PLATFORM);
 
 console.log('baseURL:', baseUrl);
@@ -6,14 +8,30 @@ console.log('baseURL:', baseUrl);
 function service(options = {}) {
 
 	options.url = `${baseUrl}${options.url}`;
-  // console.log(options.url);
+	// console.log(options.url);
 	// 判断本地是否存在token，如果存在则带上请求头
-	// if (getToken()) {
+	// const token=uni.getStorage("token")
+	// console.log(getToken());
+	// const token = getToken()
+	// console.log('请求头的token是:', token);
+	// // console.log(token);
+	// if (token) {
 	// 	options.header = {
-	// 		'content-type': 'application/json',
-	// 		'Authorization': `${getToken()}`	// 这里是token(可自行修改)
-	// 	};
+	// 		// 'content-type': 'application/json',
+	// 		'token': token	// 这里是token(可自行修改)
+	// 	}
 	// }
+
+	options.header = {
+		// 'content-type': 'application/json',
+		'token': getToken() || ''	// 这里是token(可自行修改)
+	}
+
+	console.log('请求头token是', getToken());
+	// 	// console.log(options.header);
+	// }
+
+
 	uni.showLoading({
 		title: '加载中'
 	});
@@ -52,12 +70,12 @@ function service(options = {}) {
 			});
 			rejected(err);
 		};
-		options.complete=()=>{
-			
-			
-						//  关闭正在等待的图标
-		uni.hideLoading();
-			
+		options.complete = () => {
+
+
+			//  关闭正在等待的图标
+			uni.hideLoading();
+
 		}
 		uni.request(options);
 	});
