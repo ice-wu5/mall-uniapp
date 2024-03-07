@@ -7,8 +7,11 @@
     </view>
     <view class="userInfo bgc-eee width-height-1">
       <view class="nickname height-150rpx bgc-fff border-radius-20rpx margin-side30rpx-b-20rpx position-relative">
-        <image class="w150-h150 border-radius-50 position-absoule left-5 top--20" src="http://39.98.123.211:8300/images/banner-2.png"></image>
-        <view class="position-absoule left-30 top-20">用户昵称</view>
+        <image class="w150-h150 border-radius-50 position-absoule left-5 top--20" :src="userInfo.headimgurl"></image>
+        <view v-if="userInfo.nickname" class="position-absoule left-30 top-20">{{userInfo.nickname}}</view>
+        <view v-else class="position-absoule left-30 top-20">请登录</view>
+        <view @click="toUserInfoEdit" v-if="userInfo.nickname" class="position-absoule right-10 top-20 font-size-26rpx color-orange">编辑用户信息</view>
+
       </view>
       <view class="myorder padding-10 height-200rpx bgc-fff border-radius-20rpx margin-side30rpx-b-20rpx">
         <view class="flex align-items-center height-100rpx justify-content-space-between">
@@ -50,7 +53,27 @@
 
 <script>
 export default {
-name:'UserIndex'
+name:'UserIndex',
+data(){
+  return{
+    userInfo:{
+      nickname:'',
+      headimgurl:''
+    }
+  }
+},
+onShow(){
+  const res = uni.getStorageSync('userInfo')
+  console.log('userInfo是',res);
+  this.userInfo=res
+},
+methods:{
+  toUserInfoEdit(){
+    uni.navigateTo({
+      url:'../edit/edit'
+    })
+  }
+}
 }
 </script>
 
