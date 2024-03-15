@@ -47,7 +47,7 @@ export default {
             });
           },
         });
-        console.log("用户信息", res);
+        // console.log("用户信息", res);
       } catch (error) {
         console.log("获取用户信息失败");
       }

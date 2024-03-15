@@ -32,3 +32,11 @@ export const  editUserInfo=(data)=> {
 		data
 	})
 }
+//上传用户头像
+export const  avatarUpload=(data)=> {
+	return request({
+		url: `/mall-api/fileUpload`,
+		method: 'POST',
+		data
+	})
+}
